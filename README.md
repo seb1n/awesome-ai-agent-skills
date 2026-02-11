@@ -1,24 +1,28 @@
-<div align="center">
-
 # Awesome AI Agent Skills
 
-**A curated, open-source collection of 70+ production-ready skills for AI agents.**
+**The Open-Source Library of AI Agent Skills.**
 
-[![Skills Count](https://img.shields.io/badge/Skills-70+-blue?style=flat-square)](https://github.com/burhansebin/awesome-ai-agent-skills)
+**Not a directory of links — a ready-to-use collection of 70+ complete, universal skills for any agent.**
+
+[![Skills Count](https://img.shields.io/badge/Skills-70+-blue?style=flat-square)](https://github.com/seb1n/awesome-ai-agent-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](./CONTRIBUTING.md)
 
-</div>
-
 ---
 
-## About
+## About This Library
 
-AI Agent Skills are modular, reusable packages that extend the capabilities of autonomous AI agents. Each skill follows the open [SKILL.md standard](https://agentskills.io/specification) and contains structured instructions, workflows, and examples that teach agents how to perform specific tasks reliably.
+While other collections link to external repositories, **Awesome AI Agent Skills** provides a self-contained, ready-to-use library of complete skills. Every skill in this repository is a full `SKILL.md` file with detailed instructions, workflows, and implementation guidance.
 
-This repository is a comprehensive, community-driven collection of the best AI agent skills organized across 14 categories. Every skill is designed to be compatible with leading AI coding assistants and agent platforms, including Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, Windsurf, and more.
+Our focus is on **universal, platform-agnostic skills** that make any AI agent better at general, real-world tasks like code review, security auditing, data analysis, and technical writing. This is not a list of vendor-specific tools, but a foundational library for building capable, autonomous agents.
 
-Whether you are building agents for software development, data analysis, security auditing, or marketing automation, this collection provides a solid foundation of battle-tested skills you can use immediately.
+Each skill follows the open [SKILL.md standard](https://agentskills.io/specification), making them compatible with leading AI coding assistants and agent platforms, including Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, Windsurf, and more.
+
+## Why a Library, Not a Directory?
+
+-   **Ready to Use:** No need to hunt down external repos. Just clone and use.
+-   **Standardized Quality:** Every skill follows the same high-quality, community-vetted format.
+-   **Community Owned:** This is a library built *by* the community, *for* the community. All content is here, open to improvement by everyone.
 
 ## How to Use
 
