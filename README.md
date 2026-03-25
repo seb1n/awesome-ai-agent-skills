@@ -253,3 +253,6 @@ We welcome contributions from the community. Whether you want to add a new skill
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+## SymCLI
+- [SymCLI](https://symboliccomputation.com) - SymCLI is a math skill. Turn your coding agent into an AI mathematician, SymbolicComputation.com
