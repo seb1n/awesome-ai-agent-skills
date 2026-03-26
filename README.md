@@ -246,6 +246,12 @@ license: MIT
 Instructions, workflows, and examples for the agent.
 ```
 
+## Related Skill Frameworks
+
+| Framework | Description |
+|-----------|-------------|
+| [AuraKit](https://github.com/smorky850612/Aurakit) | All-in-one Claude Code skill: 33 modes, 6-layer security, 23 hooks, 8 languages, 75% token savings. Cross-platform (Codex, Cursor, Manus, Windsurf). Install: `npx @smorky85/aurakit` |
+
 ## Contributing
 
 We welcome contributions from the community. Whether you want to add a new skill, improve an existing one, or fix a bug, please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
