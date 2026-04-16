@@ -1,6 +1,6 @@
 ---
-name: Accessibility Testing
-description: Audit web interfaces against WCAG 2.1 AA/AAA standards, identify violations, and produce actionable remediation reports with code fixes.
+name: accessibility-testing
+description: "Audit web interfaces against WCAG 2.1 AA/AAA standards, identifying violations across Perceivable, Operable, Understandable, and Robust principles. Produces structured compliance reports with severity-classified issues and concrete before/after code fixes. Use when auditing web pages for accessibility compliance, fixing WCAG violations, testing keyboard navigation, or verifying screen reader compatibility."
 license: MIT
 metadata:
   author: AI Agent Skills Community

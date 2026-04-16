@@ -1,6 +1,6 @@
 ---
-name: Code Review
-description: Perform thorough code reviews on files or pull requests, checking for bugs, security vulnerabilities, performance issues, and style violations.
+name: code-review
+description: "Conduct structured code reviews on files, directories, or pull requests, checking for bugs, security vulnerabilities, performance issues, and style violations. Produces severity-classified reports with actionable fix suggestions tied to specific lines. Use when reviewing code changes, auditing pull requests, checking for security issues in source code, or evaluating code quality before merging."
 license: MIT
 metadata:
   author: awesome-ai-agent-skills contributors

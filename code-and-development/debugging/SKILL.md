@@ -1,6 +1,6 @@
 ---
-name: Debugging
-description: Systematically diagnose and fix software bugs by analyzing error messages, stack traces, logs, and runtime behavior across multiple languages.
+name: debugging
+description: "Systematically diagnose and fix software bugs by analyzing error messages, stack traces, logs, and runtime behavior across multiple languages. Follows a structured reproduce-isolate-diagnose-fix-verify process to find root causes and produce reliable corrections. Use when investigating error messages, analyzing stack traces, diagnosing runtime failures, fixing race conditions, or resolving memory leaks."
 license: MIT
 metadata:
   author: awesome-ai-agent-skills contributors
@@ -13,15 +13,15 @@ This skill equips an AI agent with a systematic methodology for diagnosing and r
 
 ## Workflow
 
-1. **Reproduce the problem.** Confirm the bug is observable and repeatable. Gather the exact error message, stack trace, log output, or description of unexpected behavior. Identify the minimum input or sequence of steps that triggers the issue. If the bug is intermittent, note the frequency and any environmental conditions (load, timing, specific data) that correlate with its appearance.
+1. **Reproduce the problem.** Gather the exact error message, stack trace, and logs. Identify the minimum input or steps that trigger the issue. Note environmental conditions for intermittent bugs.
 
-2. **Isolate the fault location.** Use the stack trace, error message, and code structure to narrow down the region of code responsible. Trace data flow backward from the point of failure to find where the value diverged from expectations. Eliminate unrelated code paths by checking whether the bug persists when components are stubbed out or bypassed. For large codebases, use binary search strategies — disable half the system, check if the bug still occurs, and repeat.
+2. **Isolate the fault location.** Use the stack trace to narrow down the responsible code region. Trace data flow backward from the failure point. For large codebases, use binary search — disable half the system and check if the bug persists.
 
-3. **Diagnose the root cause.** Once the faulty region is identified, determine exactly why the code misbehaves. Common root causes include: incorrect assumptions about input (null, empty, out-of-range), state mutation from a concurrent thread, stale cache or memoized value, incorrect operator precedence, missing await on an async call, or a dependency version incompatibility. Distinguish the root cause from its symptoms — a NullPointerException is a symptom; the root cause may be a missing validation three function calls earlier.
+3. **Diagnose the root cause.** Distinguish symptoms from causes — a NullPointerException is a symptom; a missing validation upstream is the cause. Common roots: incorrect input assumptions, concurrent state mutation, stale caches, missing `await`, dependency version mismatches.
 
-4. **Develop and apply the fix.** Write the smallest change that addresses the root cause without introducing side effects. If the fix involves changing a shared interface, trace all callers to ensure compatibility. Prefer defensive fixes that handle the error class broadly (e.g., adding input validation) over narrow patches that only address the single observed failure.
+4. **Develop and apply the fix.** Write the smallest change addressing the root cause. Trace all callers if changing a shared interface. Prefer defensive fixes that handle the error class broadly over narrow patches.
 
-5. **Verify the fix and prevent regression.** Run the reproduction steps again to confirm the bug is resolved. Write or update a test case that encodes the previously-failing scenario so the bug cannot silently return. Check that existing tests still pass. If the bug was in a critical path, consider adding logging or monitoring to detect similar issues in the future.
+5. **Verify and prevent regression.** Re-run reproduction steps, write a regression test encoding the failure, and confirm existing tests still pass.
 
 ## Supported Technologies
 
@@ -33,18 +33,6 @@ This skill equips an AI agent with a systematic methodology for diagnosing and r
 | Profiling         | `cProfile`, `py-spy`, Chrome Performance tab, `pprof`            |
 | Memory analysis   | `tracemalloc`, `heapq`, Valgrind, Chrome Heap Snapshots          |
 | Concurrency       | Thread dumps, `asyncio` debug mode, Go race detector (`-race`)   |
-
-## Usage
-
-Provide one or more of the following inputs:
-
-- **Code snippet or file path** containing the buggy code.
-- **Error message or stack trace** — paste the full output, not a summary.
-- **Description of unexpected behavior** — what you expected versus what happened.
-- **Steps to reproduce** — the exact commands, inputs, or user actions that trigger the bug.
-- **Logs** — relevant log output from before and during the failure.
-
-The more context you provide, the faster and more accurately the agent can diagnose the issue.
 
 ## Examples
 
@@ -173,17 +161,13 @@ Key changes: (1) cap the array at a fixed size and evict the oldest entry, (2) s
 
 ## Best Practices
 
-- **Read the entire stack trace, bottom to top.** The root cause is often in the deepest application frame, not the top-level exception. Framework frames can be skipped, but your code frames should be read in order.
-- **Change one thing at a time.** When testing a hypothesis, make a single modification and re-run. Changing multiple things simultaneously makes it impossible to determine which change had the effect.
-- **Use logging strategically.** Insert log statements at the entry and exit of suspect functions, printing key variable values. Remove or reduce log verbosity after the bug is fixed.
 - **Check recent changes first.** If the bug appeared after a specific deployment or commit, `git bisect` or reviewing the recent diff is often the fastest path to the root cause.
-- **Reproduce before fixing.** Never apply a fix to a bug you cannot reproduce. Without reproduction, you cannot verify the fix works, and you risk introducing a change that masks the symptom without addressing the cause.
-- **Write a regression test.** Every fixed bug should produce a new test case that fails before the fix and passes after. This is the most reliable way to prevent the same bug from returning.
+- **Change one thing at a time.** When testing a hypothesis, make a single modification and re-run to isolate which change had the effect.
+- **Write a regression test.** Every fixed bug should produce a test case that fails before the fix and passes after.
 
 ## Edge Cases
 
-- **Heisenbugs:** Some bugs disappear when debugging tools are attached (e.g., timing changes from breakpoints mask race conditions). For these, use logging or tracing instead of interactive debuggers, and consider running with the language's race detector if available.
-- **Environment-specific bugs:** A bug that only appears in production may depend on OS version, memory limits, network latency, or configuration that differs from development. The agent will ask for environment details and suggest reproducing with matching constraints (e.g., Docker with memory limits).
-- **Third-party library bugs:** If the root cause is in a dependency rather than application code, the fix may involve upgrading the library, applying a workaround, or pinning a known-good version. The agent will check changelogs and issue trackers before recommending a path.
-- **Compiler or runtime bugs:** Rarely, the bug is in the language runtime itself. The agent will exhaust application-level explanations first, then suggest testing on a different runtime version if no application-level cause is found.
-- **Corrupted state:** If the bug involves corrupted data (e.g., a half-written database row), diagnosis requires examining the data alongside the code. The agent will ask for sample data or database state to correlate with the code path analysis.
+- **Heisenbugs:** Use logging instead of interactive debuggers when bugs disappear under observation. Run with the language's race detector if available.
+- **Environment-specific bugs:** Reproduce with matching constraints (Docker with memory limits, same OS version) when bugs only appear in production.
+- **Third-party library bugs:** Check changelogs and issue trackers before recommending upgrades, workarounds, or version pins.
+- **Corrupted state:** Examine data alongside code when bugs involve half-written records or inconsistent state.
