@@ -1,6 +1,6 @@
 ---
-name: Testing
-description: Generate, execute, and analyze tests for codebases, covering unit, integration, and end-to-end testing with coverage reporting.
+name: testing
+description: "Generate, execute, and analyze tests for codebases covering unit, integration, and end-to-end testing with coverage reporting. Supports pytest, Jest, Vitest, JUnit, Go testing, and cargo test across multiple languages. Use when writing new tests, extending test coverage, generating test cases for existing code, or analyzing coverage gaps in a test suite."
 license: MIT
 metadata:
   author: awesome-ai-agent-skills contributors
