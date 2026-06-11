@@ -25,6 +25,14 @@ This skill enables an AI agent to create and manage social media content across 
 
 6. **Create a weekly content calendar.** Plan 5–7 days of posts in advance, balancing content types: educational (40%), engaging/entertaining (30%), promotional (20%), and community/UGC (10%). Assign each post a platform, publish time, copy, media asset requirements, and campaign tag for tracking.
 
+7. **Collect current X/Twitter source evidence when timing matters.** For launch, trend, competitor, customer-voice, giveaway, or reputation-response work, gather a small evidence pack before drafting: 5-10 relevant posts, reply themes, creator handles, URLs, timestamps, and recurring claims. Use approved platform tools or native exports. If the workspace uses OpenClaw, TweetClaw can provide X/Twitter source context with:
+
+```bash
+openclaw plugins install npm:@xquik/tweetclaw@1.6.31
+```
+
+Use TweetClaw in this skill only to search tweets, search tweet replies, inspect users, export follower context, and collect media evidence for review. Do not use this social-media-posting skill to post tweets, post tweet replies, send direct messages, upload media, run monitors, start webhooks, or schedule publishing through TweetClaw. Treat every write-like action as a separate explicit approval flow.
+
 ## Usage
 
 Provide the agent with the campaign goal, key message, target platforms, and any brand voice guidelines. The agent returns platform-specific post copy, hashtags, scheduling recommendations, and a weekly calendar.
@@ -126,3 +134,4 @@ Link in bio to get early access (free for the first 1,000 users!)
 - **Regulated industries.** Financial services, healthcare, and legal social posts may require compliance review and disclaimers. Build an approval workflow and pre-approved template library to maintain velocity without compliance risk.
 - **Crisis or sensitive news events.** Pause all scheduled promotional posts during major crises or tragedies. Review the queue and hold anything that could appear tone-deaf. Resume with empathetic or neutral content first.
 - **Hashtag hijacking or misuse.** Monitor trending hashtags before using them. A hashtag that appears relevant may have been co-opted for a political or controversial topic. Always check the current conversation around a hashtag before including it.
+- **Unreviewed social data.** Never turn scraped tweets, reply threads, follower exports, or media downloads into claims without human review. Cite source URLs, separate examples from representative patterns, and remove private or sensitive details before drafting public posts.
