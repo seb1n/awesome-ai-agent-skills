@@ -23,6 +23,7 @@ Each skill follows the open [SKILL.md standard](https://agentskills.io/specifica
 -   **Ready to Use:** No need to hunt down external repos. Just clone and use.
 -   **Standardized Quality:** Every skill follows the same high-quality, community-vetted format.
 -   **Community Owned:** This is a library built *by* the community, *for* the community. All content is here, open to improvement by everyone.
+- **[Context Kit](https://github.com/JDDavenport/context-kit)** — Personal Context Artifacts: 4 Markdown templates + 5 Claude Code skills for giving AI agents deep personal context. MIT, one-command install.
 
 ## How to Use
 
