@@ -1,256 +1,204 @@
 # Awesome AI Agent Skills
 
-**The Open-Source Library of AI Agent Skills.**
+A community-shared collection of reusable skills for AI coding agents. Works with Claude Code, Cursor, Kilo Code, Windsurf, OpenAI Codex, and any AI tools that support skills or custom instructions.
 
-**Not a directory of links — a ready-to-use collection of 90+ complete, universal skills for any agent.**
+- [Context Kit](https://github.com/JDDavenport/context-kit) — 4 PCA templates + 5 Claude Code skills for persistent personal context. MIT, one-command install.
+## Source of Truth
 
-[![Skills Count](https://img.shields.io/badge/Skills-90+-blue?style=flat-square)](https://github.com/seb1n/awesome-ai-agent-skills)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](./CONTRIBUTING.md)
+- Author skills only under `skills/<skill-name>/`.
+- Assign each skill to exactly one installable bundle in `plugin-groups.json`.
+- Treat `.claude-plugin/marketplace.json`, `.agents/plugins/marketplace.json`, `plugins/**`, and generated README tables as sync outputs.
+- Do not edit `plugins/<plugin-name>/skills/**` directly; those are Codex plugin package copies regenerated from `skills/`.
+- Run `npm run sync` after changing skills or plugin grouping, then run `npm run validate`.
 
----
+## What are Skills?
 
-## About This Library
+Skills are self-contained instruction sets that teach AI agents specific workflows, guidelines, or capabilities. Each skill includes:
+- A `SKILL.md` with metadata and instructions
+- Optional reference documentation for detailed guidance
+- Reusable across any project
 
-While other collections link to external repositories, **Awesome AI Agent Skills** provides a self-contained, ready-to-use library of complete skills. Every skill in this repository is a full `SKILL.md` file with detailed instructions, workflows, and implementation guidance.
+## Installation
 
-Our focus is on **universal, platform-agnostic skills** that make any AI agent better at general, real-world tasks like code review, security auditing, data analysis, technical writing, legal compliance, financial modeling, sales, and customer success. This is not a list of vendor-specific tools, but a foundational library for building capable, autonomous agents.
+### Claude Code
 
-Each skill follows the open [SKILL.md standard](https://agentskills.io/specification), making them compatible with leading AI coding assistants and agent platforms, including Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, Windsurf, and more.
-
-## Why a Library, Not a Directory?
-
--   **Ready to Use:** No need to hunt down external repos. Just clone and use.
--   **Standardized Quality:** Every skill follows the same high-quality, community-vetted format.
--   **Community Owned:** This is a library built *by* the community, *for* the community. All content is here, open to improvement by everyone.
-- **[Context Kit](https://github.com/JDDavenport/context-kit)** — Personal Context Artifacts: 4 Markdown templates + 5 Claude Code skills for giving AI agents deep personal context. MIT, one-command install.
-
-## How to Use
-
-Each skill is a self-contained directory with a `SKILL.md` file. To use a skill, copy its directory into the appropriate skills path for your AI agent platform:
-
-| Platform | Project Path | Global Path |
-|----------|-------------|-------------|
-| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
-| OpenAI Codex | `.codex/skills/` | `~/.codex/skills/` |
-| Gemini CLI | `.gemini/skills/` | `~/.gemini/skills/` |
-| Cursor | `.cursor/skills/` | `~/.cursor/skills/` |
-| GitHub Copilot | `.github/skills/` | `~/.copilot/skills/` |
-| Windsurf | `.windsurf/skills/` | `~/.codeium/windsurf/skills/` |
-
-## Skills Index
-
-### AI/ML Operations
-
-| Skill | Description |
-|-------|-------------|
-| [data-labeling](./ai-ml-operations/data-labeling) | Create labeled datasets for machine learning model training |
-| [hyperparameter-tuning](./ai-ml-operations/hyperparameter-tuning) | Optimize model hyperparameters for better performance |
-| [ml-pipeline-creation](./ai-ml-operations/ml-pipeline-creation) | Build end-to-end machine learning pipelines |
-| [model-deployment](./ai-ml-operations/model-deployment) | Deploy trained models to production environments |
-| [model-training](./ai-ml-operations/model-training) | Train machine learning models on given datasets |
-
-### API & Integration
-
-| Skill | Description |
-|-------|-------------|
-| [api-design](./api-and-integration/api-design) | Design RESTful APIs with resources, endpoints, and data models |
-| [api-integration](./api-and-integration/api-integration) | Integrate third-party APIs into applications |
-| [graphql-api-design](./api-and-integration/graphql-api-design) | Design GraphQL schemas, queries, and mutations |
-| [oauth-2-0-setup](./api-and-integration/oauth-2-0-setup) | Implement OAuth 2.0 authentication flows |
-| [webhook-setup](./api-and-integration/webhook-setup) | Configure webhooks for event-driven integrations |
-
-### Code & Development
-
-| Skill | Description |
-|-------|-------------|
-| [code-documentation](./code-and-development/code-documentation) | Generate comprehensive code documentation |
-| [code-review](./code-and-development/code-review) | Review code for bugs, style violations, and performance issues |
-| [debugging](./code-and-development/debugging) | Identify and fix errors with root cause analysis |
-| [refactoring](./code-and-development/refactoring) | Improve code quality and maintainability |
-| [testing](./code-and-development/testing) | Write and run unit, integration, and end-to-end tests |
-| [version-control](./code-and-development/version-control) | Manage Git workflows, branching, and merging |
-
-### Communication
-
-| Skill | Description |
-|-------|-------------|
-| [chatbot-conversation-design](./communication/chatbot-conversation-design) | Design conversational flows for chatbots |
-| [email-drafting](./communication/email-drafting) | Draft professional emails for various purposes |
-| [meeting-transcription](./communication/meeting-transcription) | Transcribe and summarize meeting recordings |
-| [presentation-creation](./communication/presentation-creation) | Create slide decks and presentations |
-| [report-generation](./communication/report-generation) | Generate structured business and technical reports |
-
-### Customer Success
-
-| Skill | Description |
-|-------|-------------|
-| [churn-analysis](./customer-success/churn-analysis) | Identify at-risk accounts and churn indicators |
-| [customer-feedback-analysis](./customer-success/customer-feedback-analysis) | Analyze NPS, CSAT, and qualitative feedback for themes |
-| [knowledge-base-article-writing](./customer-success/knowledge-base-article-writing) | Write help center articles and FAQ entries |
-| [onboarding-playbook-creation](./customer-success/onboarding-playbook-creation) | Design customer onboarding workflows and checklists |
-| [ticket-triage](./customer-success/ticket-triage) | Classify, prioritize, and route support tickets |
-
-### Context Engineering
-
-| Skill | Description |
-|-------|-------------|
-| [context-compression](./context-engineering/context-compression) | Compress context to reduce token usage |
-| [context-injection](./context-engineering/context-injection) | Inject relevant context into agent prompts |
-| [context-optimization](./context-engineering/context-optimization) | Optimize context for improved agent performance |
-| [context-ranking](./context-engineering/context-ranking) | Rank and prioritize context by relevance |
-| [context-retrieval](./context-engineering/context-retrieval) | Retrieve relevant context from knowledge bases |
-
-### Data & Analytics
-
-| Skill | Description |
-|-------|-------------|
-| [data-analysis](./data-and-analytics/data-analysis) | Analyze datasets to extract insights and identify trends |
-| [data-cleaning](./data-and-analytics/data-cleaning) | Clean and preprocess raw data for analysis |
-| [data-visualization](./data-and-analytics/data-visualization) | Create charts, graphs, and interactive visualizations |
-| [exploratory-data-analysis](./data-and-analytics/exploratory-data-analysis) | Perform initial data exploration and profiling |
-| [sql-query-generation](./data-and-analytics/sql-query-generation) | Generate optimized SQL queries from natural language |
-
-### Database
-
-| Skill | Description |
-|-------|-------------|
-| [database-backup](./database/database-backup) | Create and manage database backups |
-| [database-migration](./database/database-migration) | Plan and execute database schema migrations |
-| [database-schema-design](./database/database-schema-design) | Design normalized database schemas |
-| [database-seeding](./database/database-seeding) | Populate databases with test or initial data |
-| [query-optimization](./database/query-optimization) | Optimize slow database queries |
-
-### Design & UI/UX
-
-| Skill | Description |
-|-------|-------------|
-| [accessibility-testing](./design-and-ui-ux/accessibility-testing) | Test interfaces for WCAG compliance |
-| [frontend-design](./design-and-ui-ux/frontend-design) | Design and build frontend interfaces |
-| [logo-design](./design-and-ui-ux/logo-design) | Create logo concepts and brand identity |
-| [user-flow-mapping](./design-and-ui-ux/user-flow-mapping) | Map user journeys and interaction flows |
-| [wireframing](./design-and-ui-ux/wireframing) | Create wireframes and low-fidelity mockups |
-
-### Finance & Accounting
-
-| Skill | Description |
-|-------|-------------|
-| [budget-planning](./finance-and-accounting/budget-planning) | Create and manage budgets with variance analysis |
-| [expense-categorization](./finance-and-accounting/expense-categorization) | Classify expenses by category, department, and tax deductibility |
-| [financial-modeling](./finance-and-accounting/financial-modeling) | Build financial projections, P&L, and DCF models |
-| [financial-report-generation](./finance-and-accounting/financial-report-generation) | Generate balance sheets, cash flow statements, and financial summaries |
-| [invoice-processing](./finance-and-accounting/invoice-processing) | Extract, validate, and categorize invoice data |
-
-### DevOps & Infrastructure
-
-| Skill | Description |
-|-------|-------------|
-| [ci-cd](./devops-and-infrastructure/ci-cd) | Set up CI/CD pipelines for automated builds and deployments |
-| [cloud-monitoring](./devops-and-infrastructure/cloud-monitoring) | Configure cloud monitoring and alerting |
-| [docker-compose-setup](./devops-and-infrastructure/docker-compose-setup) | Create Docker Compose configurations for multi-service apps |
-| [infrastructure-as-code](./devops-and-infrastructure/infrastructure-as-code) | Define infrastructure using Terraform, Pulumi, or CloudFormation |
-| [kubernetes-deployment](./devops-and-infrastructure/kubernetes-deployment) | Deploy and manage applications on Kubernetes |
-
-### Legal & Compliance
-
-| Skill | Description |
-|-------|-------------|
-| [compliance-checklist-generation](./legal-and-compliance/compliance-checklist-generation) | Create compliance checklists for SOC2, HIPAA, PCI-DSS, and GDPR |
-| [contract-review](./legal-and-compliance/contract-review) | Analyze contracts for risks, obligations, and key clauses |
-| [license-analysis](./legal-and-compliance/license-analysis) | Analyze open-source license compatibility and obligations |
-| [privacy-policy-drafting](./legal-and-compliance/privacy-policy-drafting) | Generate GDPR/CCPA-compliant privacy policies |
-| [terms-of-service-generation](./legal-and-compliance/terms-of-service-generation) | Draft Terms of Service documents for web apps and SaaS |
-
-### Marketing & SEO
-
-| Skill | Description |
-|-------|-------------|
-| [analytics-reporting](./marketing-and-seo/analytics-reporting) | Generate marketing analytics reports |
-| [content-strategy](./marketing-and-seo/content-strategy) | Develop content marketing strategies |
-| [keyword-research](./marketing-and-seo/keyword-research) | Research and analyze keywords for SEO |
-| [seo-optimization](./marketing-and-seo/seo-optimization) | Optimize webpages for search engine visibility |
-| [social-media-posting](./marketing-and-seo/social-media-posting) | Create and schedule social media content |
-
-### Productivity & Workflow
-
-| Skill | Description |
-|-------|-------------|
-| [file-organization](./productivity-and-workflow/file-organization) | Organize and structure files and directories |
-| [meeting-scheduler](./productivity-and-workflow/meeting-scheduler) | Schedule meetings across calendars and time zones |
-| [note-taking](./productivity-and-workflow/note-taking) | Take structured notes from meetings and documents |
-| [project-management](./productivity-and-workflow/project-management) | Manage tasks, milestones, and team coordination |
-| [task-automation](./productivity-and-workflow/task-automation) | Automate repetitive tasks and workflows |
-
-### Research & Knowledge
-
-| Skill | Description |
-|-------|-------------|
-| [deep-research](./research-and-knowledge/deep-research) | Conduct comprehensive multi-source research |
-| [fact-checking](./research-and-knowledge/fact-checking) | Verify claims against authoritative sources |
-| [knowledge-graph-creation](./research-and-knowledge/knowledge-graph-creation) | Build knowledge graphs from unstructured data |
-| [literature-review](./research-and-knowledge/literature-review) | Review and synthesize academic literature |
-| [summarization](./research-and-knowledge/summarization) | Summarize long documents and articles |
-
-### Sales
-
-| Skill | Description |
-|-------|-------------|
-| [competitive-battlecard-creation](./sales/competitive-battlecard-creation) | Build sales battlecards for competitive positioning |
-| [crm-data-enrichment](./sales/crm-data-enrichment) | Enrich CRM records with firmographic and contact data |
-| [lead-scoring](./sales/lead-scoring) | Score and prioritize leads based on fit and engagement signals |
-| [proposal-generation](./sales/proposal-generation) | Create tailored sales proposals and RFP responses |
-| [sales-email-sequences](./sales/sales-email-sequences) | Design multi-touch outbound email sequences |
-
-### Security
-
-| Skill | Description |
-|-------|-------------|
-| [dependency-scanning](./security/dependency-scanning) | Scan dependencies for known vulnerabilities |
-| [dynamic-application-security-testing](./security/dynamic-application-security-testing) | Test running applications for security flaws |
-| [security-audit](./security/security-audit) | Perform comprehensive security audits |
-| [static-application-security-testing](./security/static-application-security-testing) | Analyze source code for security vulnerabilities |
-| [threat-modeling](./security/threat-modeling) | Identify and prioritize security threats |
-
-### Writing & Content
-
-| Skill | Description |
-|-------|-------------|
-| [blog-post-writing](./writing-and-content/blog-post-writing) | Write engaging blog posts and articles |
-| [copywriting](./writing-and-content/copywriting) | Write persuasive marketing and advertising copy |
-| [proofreading](./writing-and-content/proofreading) | Proofread and edit text for grammar and clarity |
-| [technical-writing](./writing-and-content/technical-writing) | Write technical documentation and user guides |
-| [translation](./writing-and-content/translation) | Translate text between languages |
-
-## Skill Format
-
-Each skill follows the [Agent Skills open standard](https://agentskills.io/specification). A skill is a directory containing a `SKILL.md` file with YAML frontmatter and Markdown instructions:
+**Step 1: Add the marketplace**
 
 ```
-skill-name/
-├── SKILL.md          # Required: Instructions and metadata
-├── scripts/          # Optional: Executable scripts
-├── references/       # Optional: Reference documentation
-└── assets/           # Optional: Templates and resources
+/plugin marketplace add thienanblog/awesome-ai-agent-skills
 ```
 
-The `SKILL.md` file structure:
+**Step 2: Install skills**
 
-```yaml
----
-name: skill-name
-description: What the skill does and when to use it.
-license: MIT
----
-
-# Skill Name
-
-Instructions, workflows, and examples for the agent.
 ```
+# Install a plugin (can bundle multiple skills)
+/plugin install project-development-skills@awesome-ai-agent-skills
+
+# Install Laravel guidelines
+/plugin install laravel-app-skills@awesome-ai-agent-skills
+
+# Install Docker local development skill
+/plugin install devops-skills@awesome-ai-agent-skills
+
+# Install office web UI skill
+/plugin install office-web-ui-skills@awesome-ai-agent-skills
+```
+
+**Updating the marketplace**
+
+```
+/plugin marketplace update
+```
+
+Claude Code marketplace entries use `source: "./"`, `strict: false`, and explicit `skills` arrays so this repository can curate multiple related skill folders into one installable plugin without copying them into a Claude-specific plugin package. See the official Claude Code docs for [plugin marketplaces](https://code.claude.com/docs/en/plugin-marketplaces) and [plugin structure](https://code.claude.com/docs/en/plugins).
+
+### OpenAI Codex
+
+Add this repository as a Codex marketplace:
+
+```bash
+codex plugin marketplace add thienanblog/awesome-ai-agent-skills
+```
+
+Then install the plugin you want:
+
+```text
+codex
+/plugins
+```
+
+In the plugin browser:
+
+1. Choose the **Awesome AI Agent Skills** marketplace.
+2. Open one of these plugins:
+   - `project-development-skills`
+   - `laravel-app-skills`
+   - `devops-skills`
+   - `office-web-ui-skills`
+3. Select **Install plugin**.
+4. Start a new thread and ask Codex normally, or type `@` to choose the plugin or one of its bundled skills explicitly.
+
+To refresh after this repository updates:
+
+```bash
+codex plugin marketplace upgrade awesome-ai-agent-skills
+```
+
+Codex also supports installing from a local checkout while developing this repository:
+
+```bash
+git clone https://github.com/thienanblog/awesome-ai-agent-skills.git
+cd awesome-ai-agent-skills
+codex plugin marketplace add .
+```
+
+This repository includes a Codex-compatible marketplace at `.agents/plugins/marketplace.json` and plugin packages under `plugins/`. The layout follows OpenAI's docs: marketplace entries point at `./plugins/<plugin-name>`, plugin manifests live in `.codex-plugin/plugin.json`, and bundled skills live inside the plugin root. See OpenAI's [Plugins](https://developers.openai.com/codex/plugins) and [Build plugins](https://developers.openai.com/codex/plugins/build) docs.
+
+The repeated skill folders under `plugins/<plugin-name>/skills/` are generated Codex package copies. If they differ from `skills/<skill-name>/`, edit the canonical skill folder and rerun `npm run sync`.
+
+### Skills CLI
+
+The open `skills` CLI works with Codex, Claude Code, Cursor, and many other agents.
+
+On macOS:
+
+```bash
+brew install skills
+skills add thienanblog/awesome-ai-agent-skills --list
+skills add thienanblog/awesome-ai-agent-skills --skill project-development-mindset
+```
+
+Without installing globally:
+
+```bash
+npx skills add thienanblog/awesome-ai-agent-skills --list
+npx skills add thienanblog/awesome-ai-agent-skills --skill project-development-mindset
+npx skills init my-skill
+```
+
+You can also copy individual skill instructions directly into your AI agent's context or system prompt.
+
+## Available Skills
+
+<!-- SKILLS_TABLE_START -->
+| Skill | Description |
+|-------|-------------|
+| [agents-md-generator](./skills/agents-md-generator) | Generate or update AGENTS.md/CLAUDE.md files for AI coding agents through auto-scanning project files combined with interactive Q&A. Supports multiple tech stacks, development environments, source-of-truth rules, reuse-first implementation guidance, testing/debugging/performance quality gates, UI visual QA guidance, and preserves customizations when updating. |
+| [debugging-workflow](./skills/debugging-workflow) | Reproduce, isolate, and fix software bugs without guessing. Use when the user reports errors, stack traces, crashes, regressions, logs, broken behavior with unknown cause, flaky behavior, incorrect business logic, UI bugs, integration failures, failing tests or CI failures with unclear root cause, or asks to debug, investigate, diagnose, or find the root cause of a problem. |
+| [design-system-generator](./skills/design-system-generator) | Generate or update a project-specific DESIGN_SYSTEM.md that enforces consistent UI/UX across SPAs, traditional server-rendered sites, and hybrid systems. Use for design tokens, reusable component rules, UI source-of-truth conventions, animation/transition/custom class rules, accessibility gates, visual QA, Playwright screenshot guidance, and production asset/manifest requirements. |
+| [docker-local-dev](./skills/docker-local-dev) | Generate Docker Compose and Dockerfile configurations for local development through interactive Q&A. Supports single-app and monorepo PHP/Laravel, WordPress, Drupal, Joomla, Node.js, and Python stacks with live reload, dependency installer jobs, Nginx/reverse proxy routing, databases, Redis, queues, schedulers, and email testing. Use when designing local dev stacks that differ from optimized production images. |
+| [documentation-guidelines](./skills/documentation-guidelines) | Create, reorganize, or update documentation for monorepos or single-project repos using root docs indexes, unique repo/module/feature identifiers, repo-owned detailed docs, cross-repo relationship maps, machine-readable frontmatter, API contracts, workflows, runbooks, testing, and debugging guidance. |
+| [laravel-11-12-app-guidelines](./skills/laravel-11-12-app-guidelines) | Guidelines and workflow for working on Laravel 11 or Laravel 12 applications across common stacks (API-only or full-stack), including optional Docker Compose/Sail, Inertia + React, Livewire, Vue, Blade, Tailwind v4, Fortify, Wayfinder, PHPUnit, Pint, and Laravel Boost MCP tools. Use when implementing features, fixing bugs, or making UI/backend changes while following project-specific instructions (AGENTS.md, docs/). |
+| [office-web-ui-system](./skills/office-web-ui-system) | Design, verify, and refactor admin dashboard, internal dashboard, customer/user management dashboard, back-office console, and reporting UI. Use only for dashboard-style management systems with operational workflows such as metrics, stat cards, filters, data tables, CRUD/list/detail pages, forms, side panels, admin shells, Playwright/browser UI verification, screenshot-based dashboard fixes, or visual QA for operational interfaces. Do not use for general UI/UX design, marketing pages, landing pages, portfolios, product sites, games, or consumer app screens unless the task is specifically an admin or management dashboard. |
+| [performance-optimization](./skills/performance-optimization) | Diagnose and improve performance with measurements and source-of-truth constraints. Use when the user reports slowness, latency, high CPU, high memory, slow queries, N+1 issues, large payloads, slow builds, slow tests, rendering lag, bundle size, Core Web Vitals, caching, pagination, image/font loading, queues, background jobs, or asks to profile, optimize, speed up, or reduce resource usage. |
+| [project-development-mindset](./skills/project-development-mindset) | Universal project development workflow for safe, maintainable software changes. Use when creating or modifying code, documentation, UI/UX, tests, architecture, design systems, debugging workflows, performance work, deployment preparation, or multi-repository features. Enforces source-of-truth-first discovery, reuse before creating new code, cohesive file boundaries, project memory alignment, testing, and visual QA for UI tasks. |
+| [testing-verification](./skills/testing-verification) | Plan, add, repair, and run tests and verification for software changes. Use when the user asks for tests, coverage, QA, acceptance criteria, regression checks, CI test failures, Playwright or browser verification, UI screenshot comparison, visual regression, or when a code change needs a focused test strategy across frontend, backend, API, or full-stack workflows. |
+| [vps-docker-traefik-deploy](./skills/vps-docker-traefik-deploy) | Plan and implement secure production deployments of Docker Compose applications on self-hosted VPS or cloud servers using Docker Engine, Docker Compose, Traefik, private registries, SSH tunnels, least-privilege users, persistent volumes, backups, DNS, and storage growth planning. Use when an AI agent needs to design, review, document, or execute a real deploy for websites, APIs, websockets, workers, databases, and object storage integrations on Ubuntu or Debian style Linux hosts. |
+<!-- SKILLS_TABLE_END -->
+
+## Plugin Groups
+
+Plugins bundle related skills so you can install by domain. The source of truth is `plugin-groups.json`.
+
+<!-- PLUGINS_TABLE_START -->
+| Plugin | Description | Skills |
+|--------|-------------|--------|
+| [project-development-skills](./plugin-groups.json) | A cohesive workflow bundle for project setup, source-of-truth development, testing, debugging, performance, documentation, design systems, and production deployment planning. | [project-development-mindset](./skills/project-development-mindset)<br>[testing-verification](./skills/testing-verification)<br>[debugging-workflow](./skills/debugging-workflow)<br>[performance-optimization](./skills/performance-optimization)<br>[agents-md-generator](./skills/agents-md-generator)<br>[documentation-guidelines](./skills/documentation-guidelines)<br>[design-system-generator](./skills/design-system-generator)<br>[vps-docker-traefik-deploy](./skills/vps-docker-traefik-deploy) |
+| [laravel-app-skills](./plugin-groups.json) | Guidelines for building Laravel 11/12 apps across common stacks and tooling. | [laravel-11-12-app-guidelines](./skills/laravel-11-12-app-guidelines) |
+| [devops-skills](./plugin-groups.json) | Skills for Docker-based local development environment configuration. | [docker-local-dev](./skills/docker-local-dev) |
+| [office-web-ui-skills](./plugin-groups.json) | Skills for designing and refactoring admin, internal, and back-office web interfaces. | [office-web-ui-system](./skills/office-web-ui-system) |
+<!-- PLUGINS_TABLE_END -->
+
+## Repository Cleanup
+
+This repository has been narrowed to a smaller, cohesive set of skills that are intended to work together. Apologies to contributors whose community skills were removed during this cleanup; the goal is to keep this repository focused on quality-controlled project development workflows instead of hosting unrelated skill experiments.
 
 ## Contributing
 
-We welcome contributions from the community. Whether you want to add a new skill, improve an existing one, or fix a bug, please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+We welcome contributions! Here's a quick start:
+
+1. Fork this repository
+2. Create a skill folder: `skills/your-skill-name/`
+3. Add a `SKILL.md` with metadata:
+   ```yaml
+   ---
+   name: your-skill-name
+   description: What the skill does and when to use it.
+   ---
+   ```
+4. Add the skill to `plugin-groups.json` so it belongs to exactly one plugin.
+5. **Sync and validate locally before pushing:**
+   ```bash
+   npm install
+   npm run sync
+   npm run validate
+   ```
+6. Submit a pull request
+
+See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for detailed guidelines, validation instructions, and troubleshooting.
+
+## Validation Workflow
+
+- `plugin-groups.json` is the source of truth for plugin membership.
+- `npm run sync` regenerates `.claude-plugin/marketplace.json`, `.agents/plugins/marketplace.json`, `plugins/**`, and the generated tables in `README.md`.
+- `npm run validate` checks skill metadata, plugin assignments, Claude marketplace consistency, and Codex plugin package consistency.
+- Pull request CI reruns `npm run sync` and fails if generated files are out of date.
+
+## For AI Agents
+
+See [CLAUDE.md](./CLAUDE.md) for instructions on how to work with this repository, including how to group skills into plugins and update the marketplace when new skills are added.
+
+## Compatibility
+
+This skill format is designed to be universal and works with:
+- Claude Code (Anthropic)
+- OpenAI Codex
+- Cursor
+- Kilo Code
+- GitHub Copilot
+- Windsurf
+- Any AI coding assistant that supports custom instructions or skills
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+MIT
