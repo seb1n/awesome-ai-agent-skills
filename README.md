@@ -286,6 +286,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 | [knowledge-graph-creation](./research-and-knowledge/knowledge-graph-creation) | Build knowledge graphs from unstructured data |
 | [literature-review](./research-and-knowledge/literature-review) | Review and synthesize academic literature |
 | [summarization](./research-and-knowledge/summarization) | Summarize long documents and articles |
+| [x-data-research](./research-and-knowledge/x-data-research) | Research public X conversations, profiles, trends, and recurring signals |
 
 ### Sales
 
