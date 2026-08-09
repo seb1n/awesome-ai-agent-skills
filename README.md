@@ -273,6 +273,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 |-------|-------------|
 | [file-organization](./productivity-and-workflow/file-organization) | Organize and structure files and directories |
 | [meeting-scheduler](./productivity-and-workflow/meeting-scheduler) | Schedule meetings across calendars and time zones |
+| [NarraNexus](https://github.com/NetMindAI-Open/NarraNexus) | Open-source AI agent team workspace whose agents remember, collaborate, and use tools from day one. |
 | [note-taking](./productivity-and-workflow/note-taking) | Take structured notes from meetings and documents |
 | [project-management](./productivity-and-workflow/project-management) | Manage tasks, milestones, and team coordination |
 | [task-automation](./productivity-and-workflow/task-automation) | Automate repetitive tasks and workflows |
