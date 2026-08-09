@@ -271,6 +271,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 
 | Skill | Description |
 |-------|-------------|
+| [agent-workflow-packaging](./productivity-and-workflow/agent-workflow-packaging) | Convert repeated AI agent prompts and runbooks into reusable SKILL.md packages |
 | [file-organization](./productivity-and-workflow/file-organization) | Organize and structure files and directories |
 | [meeting-scheduler](./productivity-and-workflow/meeting-scheduler) | Schedule meetings across calendars and time zones |
 | [note-taking](./productivity-and-workflow/note-taking) | Take structured notes from meetings and documents |
