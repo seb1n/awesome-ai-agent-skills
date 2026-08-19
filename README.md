@@ -1,12 +1,12 @@
 # Awesome AI Agent Skills
 
-<!-- skill-count: 103 -->
+<!-- skill-count: 104 -->
 
-**103 ready-to-use AI agent skills for Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, Windsurf, and other tools that support the open Agent Skills standard.**
+**104 ready-to-use AI agent skills for Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, Windsurf, and other tools that support the open Agent Skills standard.**
 
 Every skill is a complete, self-contained `SKILL.md` workflow for agent engineering, MCP, multi-agent systems, security, coding, research, data, DevOps, documents, marketing, sales, and more—not a link to another repository.
 
-[![Skills Count](https://img.shields.io/badge/Skills-103-blue?style=flat-square)](https://github.com/seb1n/awesome-ai-agent-skills)
+[![Skills Count](https://img.shields.io/badge/Skills-104-blue?style=flat-square)](https://github.com/seb1n/awesome-ai-agent-skills)
 [![GitHub stars](https://img.shields.io/github/stars/seb1n/awesome-ai-agent-skills?style=flat-square&logo=github)](https://github.com/seb1n/awesome-ai-agent-skills/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](./CONTRIBUTING.md)
@@ -15,7 +15,7 @@ Every skill is a complete, self-contained `SKILL.md` workflow for agent engineer
 
 ⭐ If this library saves you time, star the repository to bookmark it and help more agent builders discover it.
 
-[Quick start](#quick-start-install-agent-skills) · [Production demo](#production-agent-stack-demo) · [Starter packs](#starter-packs) · [Browse 103 skills](#skills-index) · [Supported agents](#supported-agents) · [Contribute](#contributing)
+[Quick start](#quick-start-install-agent-skills) · [Production demo](#production-agent-stack-demo) · [Starter packs](#starter-packs) · [Browse 104 skills](#skills-index) · [Supported agents](#supported-agents) · [Contribute](#contributing)
 
 ## Quick Start: Install Agent Skills
 
@@ -97,7 +97,7 @@ The Skills CLI detects supported agents automatically. For manual installation, 
 
 ## Skills Index
 
-Browse all 103 skills by category, or use the full searchable index below.
+Browse all 104 skills by category, or use the full searchable index below.
 
 | Agent Building | Technical | Business & Knowledge |
 |----------------|-----------|----------------------|
@@ -286,6 +286,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 | [knowledge-graph-creation](./research-and-knowledge/knowledge-graph-creation) | Build knowledge graphs from unstructured data |
 | [literature-review](./research-and-knowledge/literature-review) | Review and synthesize academic literature |
 | [summarization](./research-and-knowledge/summarization) | Summarize long documents and articles |
+| [x-research](./research-and-knowledge/x-research) | Read current public X/Twitter search, trends, profiles, posts, media, and replies through AgentBody |
 
 ### Sales
 
