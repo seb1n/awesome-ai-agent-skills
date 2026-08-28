@@ -1,6 +1,6 @@
 # Awesome AI Agent Skills
 
-<!-- skill-count: 103 -->
+<!-- skill-count: 104 -->
 
 **103 ready-to-use AI agent skills for Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, Windsurf, and other tools that support the open Agent Skills standard.**
 
@@ -146,6 +146,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 | [api-integration](./api-and-integration/api-integration) | Integrate third-party APIs into applications |
 | [graphql-api-design](./api-and-integration/graphql-api-design) | Design GraphQL schemas, queries, and mutations |
 | [oauth-2-0-setup](./api-and-integration/oauth-2-0-setup) | Implement OAuth 2.0 authentication flows |
+| [sandbase](./api-and-integration/sandbase) | Discover and run AI models and API tools through a bounded MCP bridge |
 | [webhook-setup](./api-and-integration/webhook-setup) | Configure webhooks for event-driven integrations |
 
 ### Code & Development
