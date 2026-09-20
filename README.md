@@ -314,6 +314,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 | [blog-post-writing](./writing-and-content/blog-post-writing) | Write engaging blog posts and articles |
 | [copywriting](./writing-and-content/copywriting) | Write persuasive marketing and advertising copy |
 | [proofreading](./writing-and-content/proofreading) | Proofread and edit text for grammar and clarity |
+| [story-skills](https://github.com/danjdewhurst/story-skills) | Plan, track, and draft fiction in markdown: story bible, characters, worldbuilding, plot arcs, chapters, and continuity checks |
 | [technical-writing](./writing-and-content/technical-writing) | Write technical documentation and user guides |
 | [translation](./writing-and-content/translation) | Translate text between languages |
 
