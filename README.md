@@ -1,6 +1,6 @@
 # Awesome AI Agent Skills
 
-<!-- skill-count: 103 -->
+<!-- skill-count: 104 -->
 
 **103 ready-to-use AI agent skills for Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, Windsurf, and other tools that support the open Agent Skills standard.**
 
@@ -264,6 +264,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 | [analytics-reporting](./marketing-and-seo/analytics-reporting) | Generate marketing analytics reports |
 | [content-strategy](./marketing-and-seo/content-strategy) | Develop content marketing strategies |
 | [keyword-research](./marketing-and-seo/keyword-research) | Research and analyze keywords for SEO |
+| [marketing-mindset](./marketing-and-seo/marketing-mindset) | Decide what acquisition work to run, how much volume a test needs, and when to kill a channel |
 | [seo-optimization](./marketing-and-seo/seo-optimization) | Optimize webpages for search engine visibility |
 | [social-media-posting](./marketing-and-seo/social-media-posting) | Create and schedule social media content |
 
