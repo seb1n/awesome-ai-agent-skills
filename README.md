@@ -54,6 +54,7 @@ npx skills add seb1n/awesome-ai-agent-skills \
 | Multi-Agent Systems | [multi-agent-orchestration](./agent-engineering/multi-agent-orchestration), [mcp-server-building](./agent-engineering/mcp-server-building), [agent-evaluation](./agent-engineering/agent-evaluation) |
 | Agent Security | [prompt-injection-defense](./agent-security/prompt-injection-defense), [agent-red-teaming](./agent-security/agent-red-teaming), [skill-supply-chain-audit](./agent-security/skill-supply-chain-audit) |
 | Document Work | [pdf-processing](./documents-and-files/pdf-processing), [spreadsheet-analysis](./documents-and-files/spreadsheet-analysis), [presentation-creation](./communication/presentation-creation) |
+| [CrakSEO/skills](https://github.com/CrakSEO/skills) | Connect Claude/Cursor/Codex to CrakSEO remote MCP servers for keyword research, SERP, backlinks, rank tracking, site audit, local SEO, AI visibility, Search Console and URL indexing | Claude Code, Cursor, Codex | MIT |
 
 ### Production Agent Stack Demo
 
