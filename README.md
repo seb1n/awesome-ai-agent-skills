@@ -147,6 +147,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 | [graphql-api-design](./api-and-integration/graphql-api-design) | Design GraphQL schemas, queries, and mutations |
 | [oauth-2-0-setup](./api-and-integration/oauth-2-0-setup) | Implement OAuth 2.0 authentication flows |
 | [webhook-setup](./api-and-integration/webhook-setup) | Configure webhooks for event-driven integrations |
+| [no-stairs-please-mcp](https://nostairsplease.com/mcp) | Remote MCP server for [No Stairs Please](https://nostairsplease.com/) to search small live-music venues, capacities, and booking contacts across all 50 US states, DC, and BC |
 
 ### Code & Development
 
