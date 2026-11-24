@@ -108,6 +108,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 | [API & Integration](./api-and-integration/) | [Documents & Files](./documents-and-files/) | [Marketing & SEO](./marketing-and-seo/) |
 | [Security](./security/) | [Design & UI/UX](./design-and-ui-ux/) | [Sales](./sales/) |
 | [Productivity & Workflow](./productivity-and-workflow/) | [Research & Knowledge](./research-and-knowledge/) | [Writing & Content](./writing-and-content/) |
+| [publicrecords-skills](https://github.com/GeminiGeorge22/publicrecords-skills) | Agent Skills + MCP plugin (Claude Code, Codex, Copilot, Cursor, Gemini CLI, Kiro) for 18 public-data Apify Actors: SAM.gov, Grants.gov, USAspending, EU/UK tenders, council meetings, ATS jobs, company socials, Google Ads, Etsy, sports odds, Spotify |  |
 
 ### AI/ML Operations
 
