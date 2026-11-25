@@ -1,6 +1,6 @@
 # Awesome AI Agent Skills
 
-<!-- skill-count: 103 -->
+<!-- skill-count: 104 -->
 
 **103 ready-to-use AI agent skills for Claude Code, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, Windsurf, and other tools that support the open Agent Skills standard.**
 
@@ -164,6 +164,7 @@ Browse all 103 skills by category, or use the full searchable index below.
 | Skill | Description |
 |-------|-------------|
 | [chatbot-conversation-design](./communication/chatbot-conversation-design) | Design conversational flows for chatbots |
+| [dopamine-talk](./communication/dopamine-talk) | Cut file-path recaps, hedging disclaimers, boilerplate padding, and unasked critic-gates from coding agent replies |
 | [email-drafting](./communication/email-drafting) | Draft professional emails for various purposes |
 | [meeting-transcription](./communication/meeting-transcription) | Transcribe and summarize meeting recordings |
 | [presentation-creation](./communication/presentation-creation) | Create slide decks and presentations |
